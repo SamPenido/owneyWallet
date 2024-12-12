@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OwneyTech</title>
+    <link rel="stylesheet" href="expensetracker.css">
+
+       <link rel="icon" href="img/logo.png" type="image/png">
+
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <a href="#">OwneyWallet</a>
+            </div>
+            <ul class="navbar-links" id="navbar-links">
+                <li><a href="#investimentos">Sobre Mim</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+            <div class="navbar-toggle" id="navbar-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Controle de Despesas</h1>
+        <form id="expense-form">
+            <label for="expense-name">Nome da Despesa:</label>
+            <input type="text" id="expense-name" required>
+
+            <label for="expense-amount">Valor:</label>
+            <input type="number" id="expense-amount" required>
+
+            <label for="expense-category">Categoria:</label>
+            <select id="expense-category" required>
+                <option value="Moradia">Moradia</option>
+                <option value="Transporte">Transporte</option>
+                <option value="Alimentação">Alimentação</option>
+                <option value="Saúde">Saúde</option>
+                <option value="Educação">Educação</option>
+                <option value="Lazer e Entretenimento">Lazer e Entretenimento</option>
+                <option value="Roupas e Acessórios">Roupas e Acessórios</option>
+                <option value="Despesas Pessoais">Despesas Pessoais</option>
+                <option value="Família e Animais de Estimação">Família e Animais de Estimação</option>
+                <option value="Investimentos e Poupança">Investimentos e Poupança</option>
+                <option value="Dívidas e Empréstimos">Dívidas e Empréstimos</option>
+                <option value="Outras Despesas">Outras Despesas</option>
+                <option value="Impostos e Taxas">Impostos e Taxas</option>
+            </select>
+
+            <label for="expense-date">Data:</label>
+            <input type="date" id="expense-date" required>
+
+            <button type="submit">Adicionar Despesa</button>
+        </form>
+
+        <div class="filter">
+            <label for="filter-category">Filtrar por categoria:</label>
+            <select id="filter-category">
+                <option value="All">Todas</option>
+                <option value="Moradia">Moradia</option>
+                <option value="Transporte">Transporte</option>
+                <option value="Alimentação">Alimentação</option>
+                <option value="Saúde">Saúde</option>
+                <option value="Educação">Educação</option>
+                <option value="Lazer e Entretenimento">Lazer e Entretenimento</option>
+                <option value="Roupas e Acessórios">Roupas e Acessórios</option>
+                <option value="Despesas Pessoais">Despesas Pessoais</option>
+                <option value="Família e Animais de Estimação">Família e Animais de Estimação</option>
+                <option value="Investimentos e Poupança">Investimentos e Poupança</option>
+                <option value="Dívidas e Empréstimos">Dívidas e Empréstimos</option>
+                <option value="Outras Despesas">Outras Despesas</option>
+                <option value="Impostos e Taxas">Impostos e Taxas</option>
+            </select>
+        </div>
+
+        <!-- Filtro por Mês -->
+        <div class="filter">
+            <label for="filter-month">Filtrar por mês:</label>
+            <select id="filter-month">
+                <option value="All">Todos</option>
+                <option value="01">Janeiro</option>
+                <option value="02">Fevereiro</option>
+                <option value="03">Março</option>
+                <option value="04">Abril</option>
+                <option value="05">Maio</option>
+                <option value="06">Junho</option>
+                <option value="07">Julho</option>
+                <option value="08">Agosto</option>
+                <option value="09">Setembro</option>
+                <option value="10">Outubro</option>
+                <option value="11">Novembro</option>
+                <option value="12">Dezembro</option>
+            </select>
+        </div>
+
+        <div class="expense-table">
+            <table id="expense-list">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Valor</th>
+                        <th>Categoria</th>
+                        <th>Data</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="5">Nenhuma despesa registrada.</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="total-amount">
+            <strong>Total: R$ <span id="total-amount">0.00</span></strong>
+        </div>
+
+        <label for="sort-expenses">Ordenar por:</label>
+        <select id="sort-expenses">
+            <option value="name">Nome</option>
+            <option value="amount">Valor</option>
+            <option value="date">Data</option>
+        </select>
+
+        <!-- Botão de exportação -->
+        <button id="export-csv">Exportar para CSV</button>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Conecte-se comigo:</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/samuel-ottoni-penido-15bba2242/" target="_blank" class="social-link linkedin">LinkedIn</a>
+                <a href="https://github.com/SamPenido" target="_blank" class="social-link github">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="trackerscript.js"></script>
+
+</body>
+</html>
